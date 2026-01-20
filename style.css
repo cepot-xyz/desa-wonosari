@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -31,10 +32,6 @@
     
     /* Transitions */
     --transition: all 0.3s ease;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -75,6 +72,33 @@ body {
     align-items: center;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .nav-brand h1 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -92,16 +116,18 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: var(--spacing-lg);
+    gap: 1rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .nav-link {
     color: var(--color-white);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: var(--transition);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-xs) 6px;
     border-bottom: 2px solid transparent;
 }
 
@@ -109,6 +135,74 @@ body {
     border-bottom-color: var(--color-accent);
     color: var(--color-accent);
 }
+
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown .nav-link::after {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    margin-left: 6px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    vertical-align: -2px;
+}
+
+.nav-dropdown.active .nav-link::after {
+    transform: rotate(-135deg);
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: var(--color-primary-dark) !important;
+    border-radius: 5px !important;
+    min-width: 220px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    z-index: 100 !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+    margin-top: 8px !important;
+    padding: 8px 0 !important;
+    display: none !important;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    display: block !important;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 16px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border: none;
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-secondary);
+    padding-left: 20px;
+}
+
 
 /* ============================================
    HAMBURGER MENU
@@ -198,6 +292,54 @@ body {
     display: block;
     padding: var(--spacing-md);
     border: none;
+}
+
+.mobile-menu .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu .dropdown-toggle::after {
+    margin-left: auto !important;
+    margin-right: 0;
+}
+
+.mobile-menu .dropdown-menu {
+    position: static;
+    background-color: rgba(0, 13, 26, 0.95);
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    z-index: auto;
+}
+
+.mobile-menu .nav-dropdown.active .dropdown-menu {
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+}
+
+.mobile-menu .dropdown-item {
+    padding: 12px 16px;
+    padding-left: 40px;
+    border-radius: 0;
+    font-size: 0.85rem;
+    background-color: rgba(0, 13, 26, 0.6);
+    border-left: 3px solid var(--color-secondary);
+}
+
+.mobile-menu .dropdown-item:hover {
+    background-color: rgba(0, 82, 163, 0.7);
+    padding-left: 44px;
 }
 
 /* ============================================
@@ -578,12 +720,38 @@ main {
         display: flex;
     }
     
+    .nav-logo {
+        display: none !important;
+    }
+    
     main {
         margin-top: 65px;
     }
     
     .nav-brand h1 {
         font-size: 1.2rem;
+    }
+    
+    /* Hide desktop dropdown styling on mobile */
+    .desktop-menu .dropdown-menu {
+        display: none !important;
+    }
+    
+    /* Show mobile dropdown items directly */
+    .mobile-menu .dropdown-menu {
+        position: static !important;
+        background-color: rgba(0, 13, 26, 0.95) !important;
+        max-height: none !important;
+        overflow: visible !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        z-index: auto !important;
     }
     
     .hero h2 {

@@ -2,10 +2,14 @@
    HAMBURGER MENU TOGGLE
    ============================================ */
 
+document.addEventListener('DOMContentLoaded', function() {
+    
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobileNav = document.getElementById('mobileNav');
-const mobileNavLinks = document.querySelectorAll('.mobile-menu .nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-menu > li > .nav-link:not(.dropdown-toggle)');
 const body = document.body;
+
+console.log('DOM Content Loaded - Initializing navigation');
 
 // Toggle Mobile Menu
 hamburgerBtn.addEventListener('click', function(e) {
@@ -21,10 +25,33 @@ hamburgerBtn.addEventListener('click', function(e) {
     }
 });
 
-// Close Mobile Menu when Link is Clicked
+// Close Mobile Menu when non-dropdown Link is Clicked
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.stopPropagation();
+        hamburgerBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
+        body.style.overflow = 'auto';
+    });
+});
+
+// Handle Mobile Dropdown Toggle
+const setupDropdownToggles = () => {
+    const toggles = document.querySelectorAll('.mobile-menu .dropdown-toggle');
+    
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    });
+};
+
+setupDropdownToggles();
+
+// Close menu when dropdown item is clicked
+document.querySelectorAll('.mobile-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', function(e) {
         hamburgerBtn.classList.remove('active');
         mobileNav.classList.remove('active');
         body.style.overflow = 'auto';
@@ -97,7 +124,7 @@ window.addEventListener('scroll', function() {
    ============================================ */
 
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-menu .nav-link');
 
 function updateActiveLink() {
     let current = '';
@@ -111,7 +138,8 @@ function updateActiveLink() {
         }
     });
     
-    navLinks.forEach(link => {
+    // Only apply active class to mobile menu links, not desktop
+    mobileNavLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
@@ -270,3 +298,5 @@ createScrollToTopButton();
 console.log('Dokar Wonosari - Portal Administrasi Desa');
 console.log('Version 2.0');
 console.log('Powered by Vanilla HTML, CSS & JavaScript');
+
+}); // End of DOMContentLoaded
