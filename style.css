@@ -214,6 +214,8 @@ body {
     cursor: pointer;
     gap: 6px;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -264,7 +266,6 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     animation: slideDown 0.4s ease forwards;
 }
-
 .mobile-menu li:nth-child(1) { animation-delay: 0.05s; }
 .mobile-menu li:nth-child(2) { animation-delay: 0.1s; }
 .mobile-menu li:nth-child(3) { animation-delay: 0.15s; }
@@ -292,6 +293,7 @@ body {
     display: block;
     padding: var(--spacing-md);
     border: none;
+    padding: 1rem var(--spacing-md);
 }
 
 .mobile-menu .dropdown-toggle {
@@ -718,6 +720,7 @@ main {
     
     .hamburger {
         display: flex;
+        z-index: 1001;
     }
     
     .nav-logo {
@@ -1434,6 +1437,98 @@ main {
     transform: translateX(5px);
 }
 
+/* ============================================
+   INDEX2 PERATURAN LIST
+   ============================================ */
+
+.peraturan-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.peraturan-item {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+.peraturan-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 82, 163, 0.15);
+}
+
+.peraturan-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.peraturan-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+}
+
+/* ============================================
+   PETA SECTION
+   ============================================ */
+
+.peta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.map-embed {
+    background: var(--color-white);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    width: 100%;
+}
+
+.peta-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+    max-width: 1000px;
+    margin: 0 auto;
+
+@media (max-width: 768px) {
+    .peraturan-item {
+        padding: var(--spacing-md);
+    }
+    
+    .peraturan-item h3 {
+        font-size: 0.95rem;
+    }
+    
+    .peraturan-item p {
+        font-size: 0.85rem;
+    }
+    
+    .map-embed {
+        padding: var(--spacing-md);
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .peraturan-card {
         padding: var(--spacing-md);
@@ -1444,3 +1539,1178 @@ main {
     }
 }
 
+/* ============================================
+   GEOGRAFIS PAGE STYLES
+   ============================================ */
+
+.geografis-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.geografis-section.alt-bg {
+    background-color: var(--color-light-gray);
+}
+
+.geografis-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.geografis-card {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+
+
+.geografis-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.geografis-card h3 i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.geografis-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+}
+
+.geografis-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   GEOGRAFIS TABLE STYLES
+   ============================================ */
+
+.geografis-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.geografis-table thead {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+}
+
+.geografis-table thead th {
+    padding: var(--spacing-md);
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 31, 63, 0.2);
+}
+
+.geografis-table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.geografis-table tbody td {
+    padding: var(--spacing-md);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.geografis-table tbody td:first-child {
+    font-weight: 600;
+    text-align: center;
+}
+
+.geografis-table .total-row {
+    background-color: var(--color-accent);
+    font-weight: 700;
+}
+
+.geografis-table .total-row td {
+    border-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   INFO GRID
+   ============================================ */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.info-item {
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+
+
+.info-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   ADMINISTRATIF LIST
+   ============================================ */
+
+.administratif-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.administratif-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+
+
+.administratif-item .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.2);
+}
+
+.administratif-item .detail strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.administratif-item .detail p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ============================================
+   DISTANCE LIST
+   ============================================ */
+
+.distance-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.distance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(90deg, var(--color-accent) 0%, rgba(232, 244, 248, 0.5) 100%);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 5px;
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+}
+
+
+
+.distance-name {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+}
+
+.distance-value {
+    font-weight: 700;
+    color: var(--color-secondary);
+    font-size: 1rem;
+    background: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--color-secondary);
+}
+
+/* ============================================
+   GEOGRAFIS RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .geografis-card {
+        padding: var(--spacing-md);
+    }
+
+    .geografis-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .geografis-card p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .geografis-table {
+        font-size: 0.85rem;
+    }
+
+    .geografis-table thead th {
+        padding: var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+
+    .geografis-table tbody td {
+        padding: var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .administratif-list {
+        grid-template-columns: 1fr;
+    }
+
+    .distance-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .geografis-card h3 {
+        font-size: 1rem;
+    }
+
+    .geografis-table {
+        font-size: 0.75rem;
+    }
+
+    .geografis-table thead th {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .geografis-table tbody td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .administratif-item .badge {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.85rem;
+    }
+
+    .administratif-item .detail strong {
+        font-size: 0.9rem;
+    }
+
+    .administratif-item .detail p {
+        font-size: 0.8rem;
+    }
+
+    .distance-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .distance-value {
+        font-size: 0.9rem;
+        align-self: flex-start;
+    }
+}
+
+/* ============================================
+   EKONOMI PAGE STYLES
+   ============================================ */
+
+.ekonomi-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.ekonomi-section.alt-bg {
+    background-color: var(--color-light-gray);
+}
+
+.ekonomi-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.ekonomi-card {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+.ekonomi-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.ekonomi-card h3 i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.ekonomi-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+}
+
+.ekonomi-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   INCOME GRID
+   ============================================ */
+
+.income-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.income-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+.income-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.income-detail strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.income-detail p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+/* ============================================
+   BUSINESS LIST
+   ============================================ */
+
+.business-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.business-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(90deg, var(--color-accent) 0%, rgba(232, 244, 248, 0.5) 100%);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 5px;
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+.business-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.2);
+}
+
+.business-info strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.business-info p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+/* ============================================
+   POTENTIAL GRID
+   ============================================ */
+
+.potential-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.potential-item {
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.potential-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.potential-item p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   EKONOMI RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .ekonomi-card {
+        padding: var(--spacing-md);
+    }
+
+    .ekonomi-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .ekonomi-card p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .income-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-list {
+        gap: var(--spacing-sm);
+    }
+
+    .potential-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .ekonomi-card h3 {
+        font-size: 1rem;
+    }
+
+    .income-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .income-detail strong {
+        text-align: center;
+    }
+
+    .income-detail p {
+        text-align: center;
+    }
+
+    .business-item {
+        gap: var(--spacing-sm);
+    }
+
+    .potential-item {
+        padding: var(--spacing-md);
+    }
+}
+/* ============================================
+   INFRASTRUKTUR PAGE STYLES
+   ============================================ */
+
+.infrastruktur-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.infrastruktur-section.alt-bg {
+    background-color: var(--color-light-gray);
+}
+
+.infrastruktur-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.infrastruktur-card {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+.infrastruktur-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.infrastruktur-card h3 i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.infrastruktur-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+}
+
+.infrastruktur-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   INFRASTRUKTUR TABLE STYLES
+   ============================================ */
+
+.infra-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.infra-table thead {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+}
+
+.infra-table thead th {
+    padding: var(--spacing-md);
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 31, 63, 0.2);
+}
+
+.infra-table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.infra-table tbody td {
+    padding: var(--spacing-md);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.infra-table tbody td:first-child {
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ============================================
+   INFRASTRUKTUR RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .infrastruktur-card {
+        padding: var(--spacing-md);
+    }
+
+    .infrastruktur-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .infrastruktur-card p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .infra-table {
+        font-size: 0.85rem;
+    }
+
+    .infra-table thead th {
+        padding: var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+
+    .infra-table tbody td {
+        padding: var(--spacing-sm);
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .infrastruktur-card h3 {
+        font-size: 1rem;
+    }
+
+    .infra-table {
+        font-size: 0.75rem;
+    }
+
+    .infra-table thead th {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .infra-table tbody td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* ============================================
+   SOSIAL BUDAYA PAGE STYLES
+   ============================================ */
+
+.sosial-budaya-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.sosial-budaya-section.alt-bg {
+    background-color: var(--color-light-gray);
+}
+
+.sosial-budaya-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.sosial-budaya-card {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+.sosial-budaya-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.sosial-budaya-card h3 i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.sosial-budaya-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+}
+
+.sosial-budaya-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   STRATEGY GRID
+   ============================================ */
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.strategy-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+.strategy-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.strategy-detail strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.strategy-detail p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+/* ============================================
+   ORMAS LIST
+   ============================================ */
+
+.ormas-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.ormas-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: linear-gradient(90deg, var(--color-accent) 0%, rgba(232, 244, 248, 0.5) 100%);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 5px;
+    transition: var(--transition);
+    align-items: flex-start;
+}
+
+.ormas-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.2);
+}
+
+.ormas-info strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.ormas-info p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    text-align: left;
+}
+
+/* ============================================
+   DEVELOPMENT GRID
+   ============================================ */
+
+.development-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.development-item {
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.development-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.development-item p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   SOSIAL BUDAYA RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .sosial-budaya-card {
+        padding: var(--spacing-md);
+    }
+
+    .sosial-budaya-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .sosial-budaya-card p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .strategy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ormas-list {
+        gap: var(--spacing-sm);
+    }
+
+    .development-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sosial-budaya-card h3 {
+        font-size: 1rem;
+    }
+
+    .strategy-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .strategy-detail strong {
+        text-align: center;
+    }
+
+    .strategy-detail p {
+        text-align: center;
+    }
+
+    .ormas-item {
+        gap: var(--spacing-sm);
+    }
+
+    .development-item {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   KEPENDUDUKAN PAGE STYLES
+   ============================================ */
+
+.kependudukan-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.kependudukan-section.alt-bg {
+    background-color: var(--color-light-gray);
+}
+
+.kependudukan-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.kependudukan-card {
+    background: var(--color-white);
+    border-left: 4px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.05);
+    transition: var(--transition);
+}
+
+.kependudukan-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.kependudukan-card h3 i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.kependudukan-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    text-align: justify;
+}
+
+/* ============================================
+   KEPENDUDUKAN TABLE STYLES
+   ============================================ */
+
+.kependudukan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    background-color: var(--color-white);
+    font-size: 0.9rem;
+}
+
+.kependudukan-table thead {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white);
+}
+
+.kependudukan-table thead th {
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 31, 63, 0.2);
+}
+
+.kependudukan-table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.kependudukan-table tbody td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.kependudukan-table tbody td:first-child {
+    font-weight: 600;
+    text-align: center;
+}
+
+.kependudukan-table tbody td:nth-child(2) {
+    text-align: center;
+    font-weight: 500;
+}
+
+.kependudukan-table .total-row {
+    background-color: var(--color-accent);
+    font-weight: 700;
+}
+
+.kependudukan-table .total-row td {
+    border-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   DEMOGRAFI GRID
+   ============================================ */
+
+.demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.demo-item {
+    background: linear-gradient(135deg, var(--color-accent) 0%, rgba(0, 82, 163, 0.05) 100%);
+    border-left: 4px solid var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 5px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.demo-item strong {
+    display: block;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.demo-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+/* ============================================
+   KEPENDUDUKAN RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .kependudukan-card {
+        padding: var(--spacing-md);
+    }
+
+    .kependudukan-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .kependudukan-card p {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .kependudukan-table {
+        font-size: 0.8rem;
+    }
+
+    .kependudukan-table thead th {
+        padding: var(--spacing-xs) 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .kependudukan-table tbody td {
+        padding: var(--spacing-xs) 0.25rem;
+        font-size: 0.8rem;
+    }
+
+    .demo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .kependudukan-card h3 {
+        font-size: 1rem;
+    }
+
+    .kependudukan-table {
+        font-size: 0.7rem;
+    }
+
+    .kependudukan-table thead th {
+        padding: 0.25rem;
+        font-size: 0.65rem;
+    }
+
+    .kependudukan-table tbody td {
+        padding: 0.25rem;
+        font-size: 0.7rem;
+    }
+
+    .demo-item {
+        padding: var(--spacing-md);
+    }
+}

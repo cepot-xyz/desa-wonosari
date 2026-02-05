@@ -16,18 +16,9 @@
             text-align: center;
         }
         
-        .map-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: var(--spacing-lg);
-        }
-        
         .map-wrapper {
-            /* background-color: var(--color-light-gray); */
             border-radius: 10px;
             padding: var(--spacing-lg);
-            /* box-shadow: 0 2px 8px rgba(0, 31, 63, 0.1); */
         }
         
         .map-wrapper svg {
@@ -38,10 +29,6 @@
         }
         
         @media (max-width: 768px) {
-            .map-title {
-                font-size: 1.5rem;
-            }
-            
             .map-wrapper {
                 padding: var(--spacing-md);
             }
@@ -58,9 +45,19 @@
     ?>
 
     <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Peta Desa Wonosari</h2>
+                    <p>Visualisasi Wilayah dan Batasan Administratif Desa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
         <section class="map-section">
             <div class="map-container">
-                <h2 class="map-title">Peta Desa Wonosari</h2>
                 <div class="map-wrapper">
                     <?php include 'assets/map.svg'; ?>
                 </div>

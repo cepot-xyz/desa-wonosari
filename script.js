@@ -250,64 +250,6 @@ window.addEventListener('resize', adjustNavbarForMobile);
 adjustNavbarForMobile();
 
 /* ============================================
-   UTILITY: SCROLL TO TOP BUTTON (Optional)
-   ============================================ */
-
-function createScrollToTopButton() {
-    const button = document.createElement('button');
-    button.innerHTML = '↑';
-    button.className = 'scroll-to-top';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background-color: var(--color-secondary);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none;
-        z-index: 999;
-        transition: all 0.3s ease;
-        font-weight: bold;
-    `;
-    
-    document.body.appendChild(button);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            button.style.display = 'flex';
-            button.style.justifyContent = 'center';
-            button.style.alignItems = 'center';
-        } else {
-            button.style.display = 'none';
-        }
-    });
-    
-    button.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px)';
-        this.style.boxShadow = '0 4px 12px rgba(0, 82, 163, 0.3)';
-    });
-    
-    button.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = 'none';
-    });
-}
-
-createScrollToTopButton();
-
-/* ============================================
    KK FORM HANDLING
    ============================================ */
 

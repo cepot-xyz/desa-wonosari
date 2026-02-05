@@ -1,5 +1,5 @@
 <?php
-/** Desa Wonosari - Portal Informasi dan Administrasi**/
+/** Desa Wonosari - Portal Informasi dan Administrasi (Index 2) **/
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desa Wonosari - Portal Informasi dan Administrasi Pemerintahan Desa">
-    <meta name="keywords" content="Desa Wonosari, Administrasi, Kelahiran, Kematian, Pernikahan">
+    <meta name="keywords" content="Desa Wonosari, Administrasi, Visi Misi, Sejarah, Peraturan, Peta">
     <meta name="author" content="Pemerintah Desa Wonosari">
     <title>Desa Wonosari - Portal Informasi</title>
     
@@ -34,186 +34,144 @@
                 <div class="hero-content">
                     <h2>Selamat Datang di Desa Wonosari</h2>
                     <p>Pusat Informasi dan Layanan Administrasi Pemerintahan Desa</p>
-                    <div class="hero-buttons">
-                        <a href="#kelahiran" class="btn btn-primary">Layanan Kependudukan</a>
-                        <a href="#kematian" class="btn btn-secondary">Data & Infografis Desa</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visi Misi Section -->
+        <section id="visi-misi" class="service-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Visi & Misi Desa</h2>
+                    <p class="section-subtitle">Cita-cita dan Arah Pembangunan Desa Wonosari 2020-2026</p>
+                </div>
+                
+                <div class="service-grid">
+                    <div class="service-card">
+                        <h3>Visi Desa</h3>
+                        <p><strong>"Mewujudkan Desa WONOSARI ASRI"</strong> - Wonosari yang Adil, Sejahtera, Religius dan Indah. Visi ini menjadi cita-cita yang akan diwujudkan dalam membangun desa selama kurun waktu 6 tahun ke depan.</p>
+                        <a href="visi-misi.php" class="btn-link">Baca Selengkapnya →</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3>Misi Desa</h3>
+                        <p>Untuk mewujudkan visi desa, terdapat 13 misi pembangunan yang mencakup pelayanan aparatur, tata kelola pemerintahan, pengembangan ekonomi, pembangunan infrastruktur, kesehatan, pendidikan, dan pelestarian sumber daya alam.</p>
+                        <a href="visi-misi.php" class="btn-link">Baca Selengkapnya →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Kelahiran Section -->
-        <section id="kelahiran" class="service-section">
+        <!-- Sejarah Section -->
+        <section id="sejarah" class="service-section alt-bg">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Kependudukan</h2>
-                    <p class="section-subtitle">Pusat Layanan Kependudukan Desa Wonosari</p>
+                    <h2>Sejarah Desa Wonosari</h2>
+                    <p class="section-subtitle">Perjalanan Panjang Desa Wonosari dari Zaman Kolonial hingga Sekarang</p>
                 </div>
                 
                 <div class="service-grid">
                     <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-clipboard-heart"></i></div>
-                        <h3>Pembuatan Akta Kelahiran</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                        <h3>Era Kolonial</h3>
+                        <p>Desa Wonosari telah ada sejak jaman kolonial Belanda. Sebelum tahun 1938, desa terbagi menjadi 3 desa yaitu Mbelang dan Tanjung dengan total 5 dusun. Wilayah ini dikuasai oleh Belanda dengan peninggalan berupa jembatan kereta api di Pidik.</p>
+                        <a href="sejarah.php" class="btn-link">Baca Selengkapnya →</a>
                     </div>
                     
                     <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-file-earmark-text"></i></div>
-                        <h3>Syarat & Ketentuan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-calendar-event"></i></div>
-                        <h3>Jadwal Pelayanan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                        <h3>Kepemimpinan Desa</h3>
+                        <p>Sejak 1938 hingga sekarang, Desa Wonosari telah dipimpin oleh 8 Kepala Desa. Kepemimpinan terus berkembang mengikuti perubahan zaman, dari era kolonial, pemerintahan Orde Lama, hingga era reformasi modern saat ini di bawah kepemimpinan Bapak Mukalil.</p>
+                        <a href="sejarah.php" class="btn-link">Baca Selengkapnya →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Layanan Kematian -->
-        <section id="kematian" class="service-section alt-bg">
+        <!-- Peraturan Section -->
+        <section id="peraturan" class="service-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Surat Menyurat</h2>
-                    <p class="section-subtitle">Pelayanan Pengantar SKCK, Surat Kehilangan Barang, Surat Keterangan Usaha</p>
+                    <h2>Peraturan Desa</h2>
+                    <p class="section-subtitle">Dokumen Resmi Pemerintah Desa Wonosari</p>
                 </div>
                 
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-pencil-square"></i></div>
-                        <h3>Layanan Pembuatan SKCK</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                <div class="peraturan-list">
+                    <div class="peraturan-item">
+                        <h3>SURAT KEPUTUSAN KEPALA DESA/LURAH WONOSARI NOMOR 07/SK/II/WNS/2024</h3>
+                        <p>Tentang Penunjukan/Pengangkatan Petugas Operator Pelayanan Administrasi Kependudukan Program PAK Kades Mantab Th.2024</p>
+                        <a href="https://wonosari.kendalkab.go.id/upload/peraturan/ec46e8cfed498ea8f721553a9ee0fe50.pdf" class="btn btn-primary btn-sm" target="_blank">Lihat Dokumen</a>
                     </div>
                     
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-check-circle"></i></div>
-                        <h3>Lorem Ipsum Dolor</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                    <div class="peraturan-item">
+                        <h3>KEPUTUSAN KEPALA DESA WONOSARI NOMOR 19/SK/I/WNS/2025</h3>
+                        <p>Tentang Pengangkatan Kader Pembangunan Manusia (KPM) dan Admin Desa (Non KPM) Desa Wonosari Tahun Anggaran 2025</p>
+                        <a href="https://wonosari.kendalkab.go.id/upload/peraturan/635a2d069834642f797b71c38f46d1e5.pdf" class="btn btn-primary btn-sm" target="_blank">Lihat Dokumen</a>
                     </div>
                     
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-telephone"></i></div>
-                        <h3>Hubungi Kami</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                    <div class="peraturan-item">
+                        <h3>KEPUTUSAN KEPALA DESA WONOSARI NOMOR 18/SK/I/TAHUN 2025</h3>
+                        <p>Tentang Penetapan Harga Satuan Barang dan Jasa Di Desa Wonosari Tahun Anggaran 2025</p>
+                        <a href="https://wonosari.kendalkab.go.id/upload/peraturan/45804caea8e543ed4defd826b0b14f7a.pdf" class="btn btn-primary btn-sm" target="_blank">Lihat Dokumen</a>
                     </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="peraturan.php" class="btn btn-secondary">Lihat Semua Peraturan</a>
                 </div>
             </div>
         </section>
 
-        <!-- Pernikahan Section -->
-        <section id="pernikahan" class="service-section">
+        <!-- Peta Section -->
+        <section id="peta" class="service-section alt-bg">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Pernikahan</h2>
-                    <p class="section-subtitle">Pendaftaran dan Informasi Pernikahan</p>
+                    <h2>Peta Desa Wonosari</h2>
+                    <p class="section-subtitle">Lokasi dan Wilayah Desa Wonosari</p>
                 </div>
                 
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-heart"></i></div>
-                        <h3>Pendaftaran Pernikahan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                <div class="peta-container">
+                    <div class="map-embed">
+                        <img src="assets/map.svg" alt="Peta Desa Wonosari" class="peta-image">
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-file-pdf"></i></div>
-                        <h3>Dokumen Diperlukan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-calendar2-check"></i></div>
-                        <h3>Reservasi Pendaftaran</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
-                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="peta.php" class="btn btn-primary">Lihat Peta Lengkap</a>
                 </div>
             </div>
         </section>
 
-        <!-- Menu 4 Section -->
-        <section id="menu4" class="service-section alt-bg">
+        <!-- Layanan Section -->
+        <section id="layanan" class="service-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Umum</h2>
-                    <p class="section-subtitle">Berbagai Layanan dari Pemerintah Desa</p>
+                    <h2>Layanan Desa</h2>
+                    <p class="section-subtitle">Berbagai Layanan Pemerintah Desa untuk Masyarakat</p>
                 </div>
                 
                 <div class="service-grid">
                     <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-house"></i></div>
-                        <h3>Surat Keterangan Domisili</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="card-icon"><i class="bi bi-file-earmark-person"></i></div>
+                        <h3>Layanan Kependudukan</h3>
+                        <p>Layanan pembuatan Kartu Keluarga, Akta Kelahiran, Akta Kematian, dan berbagai dokumen kependudukan lainnya untuk masyarakat Desa Wonosari.</p>
                         <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
                     
                     <div class="service-card">
-                        <div class="card-icon"><i class="bi bi-mortarboard"></i></div>
-                        <h3>Surat Keterangan Sekolah</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="card-icon"><i class="bi bi-file-text"></i></div>
+                        <h3>Surat Menyurat</h3>
+                        <p>Penerbitan surat-surat resmi seperti Surat Pengantar SKCK, Surat Kehilangan, Surat Keterangan Usaha, dan surat keterangan lainnya sesuai kebutuhan.</p>
                         <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
                     
                     <div class="service-card">
                         <div class="card-icon"><i class="bi bi-graph-up"></i></div>
-                        <h3>Surat Keterangan Penghasilan</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
+                        <h3>Data & Statistik</h3>
+                        <p>Informasi data desa meliputi data geografis, sosial budaya, ekonomi desa, infrastruktur, dan data kependudukan yang tersedia untuk publik.</p>
+                        <a href="geografis.php" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Menu 6 Section -->
-        <section id="menu6" class="service-section alt-bg">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Hubungi Kami</h2>
-                    <p class="section-subtitle">Informasi Kontak Pemerintah Desa Wonosari</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
-                        <h3>Alamat</h3>
-                        <p>Jl. Raya Desa Wonosari<br>Kecamatan [Nama Kecamatan]<br>Kabupaten [Nama Kabupaten]</p>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
-                        <h3>Telepon</h3>
-                        <p>(0291) XXX-XXXX<br>Lorem ipsum dolor sit amet</p>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="bi bi-envelope"></i></div>
-                        <h3>Email</h3>
-                        <p>info@wonosari.desa.id<br>admin@wonosari.desa.id</p>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <h3>Kirim Pesan</h3>
-                    <form id="contactForm">
-                        <input type="text" placeholder="Nama Anda" required>
-                        <input type="email" placeholder="Email Anda" required>
-                        <textarea placeholder="Pesan Anda" rows="5" required></textarea>
-                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <?php include 'components/footer.php'; renderFooter(); ?>
 
