@@ -15,21 +15,12 @@ function renderFooter() {
                     <p>Portal Informasi dan Layanan Administrasi Pemerintahan Desa</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Menu Cepat</h4>
-                    <ul>
-                        <li><a href="#beranda">Beranda</a></li>
-                        <li><a href="#kelahiran">Kelahiran</a></li>
-                        <li><a href="#kematian">Kematian</a></li>
-                        <li><a href="#pernikahan">Pernikahan</a></li>
-                    </ul>
+                    <h4>Alamat</h4>
+                    <p>Dusun Mijen<br>Desa Wonosari<br>Kecamatan Pegandon<br>Kabupaten Kendal, Jawa Tengah</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Media Sosial</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
+                    <h4>Jam Kerja</h4>
+                    <p>Senin - Jumat<br>08:00 - 16:00 WIB<br><br>Istirahat: 12:00 - 13:00 WIB</p>
                 </div>
             </div>
             <div class="footer-bottom">
