@@ -6,13 +6,27 @@ document.addEventListener('DOMContentLoaded', function() {
     
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobileNav = document.getElementById('mobileNav');
-const mobileNavLinks = document.querySelectorAll('.mobile-menu > li > .nav-link:not(.dropdown-toggle)');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu > li > .nav-link:not(.dropdown-toggle)');
 const body = document.body;
 
 console.log('DOM Content Loaded - Initializing navigation');
+console.log('Hamburger Button:', hamburgerBtn);
+console.log('Mobile Nav:', mobileNav);
+
+// Check if elements exist before adding event listeners
+if (!hamburgerBtn) {
+    console.error('Hamburger button not found!');
+    return;
+}
+
+if (!mobileNav) {
+    console.error('Mobile nav not found!');
+    return;
+}
 
 // Toggle Mobile Menu
 hamburgerBtn.addEventListener('click', function(e) {
+    console.log('Hamburger clicked');
     e.stopPropagation();
     this.classList.toggle('active');
     mobileNav.classList.toggle('active');
@@ -26,7 +40,7 @@ hamburgerBtn.addEventListener('click', function(e) {
 });
 
 // Close Mobile Menu when non-dropdown Link is Clicked
-mobileNavLinks.forEach(link => {
+mobileMenuLinks.forEach(link => {
     link.addEventListener('click', function(e) {
         e.stopPropagation();
         hamburgerBtn.classList.remove('active');
@@ -98,6 +112,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+}); // Closing DOMContentLoaded event listener
 
 /* ============================================
    NAVBAR HIDE ON SCROLL DOWN
@@ -292,6 +308,134 @@ function createScrollToTopButton() {
 createScrollToTopButton();
 
 /* ============================================
+   KK FORM HANDLING
+   ============================================ */
+
+// KK Form initialization
+const kkForm = document.getElementById('kkForm');
+if (kkForm) {
+    const formContainer = document.getElementById('formContainer');
+    const summaryContainer = document.getElementById('summaryContainer');
+
+    // Handle form submission
+    kkForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(kkForm);
+
+        // Show loading state
+        const submitBtn = kkForm.querySelector('.btn-submit');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sedang menyimpan...';
+        submitBtn.disabled = true;
+
+        // Send data to backend via AJAX
+        fetch('save_kk.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Update summary with saved data
+                document.getElementById('summaryNama').textContent = data.data.namaLengkap || '-';
+                document.getElementById('summaryNIK').textContent = data.data.nik || '-';
+                document.getElementById('summaryJenisKelamin').textContent = data.data.jenisKelamin || '-';
+                document.getElementById('summaryTempatLahir').textContent = data.data.tempatLahir || '-';
+                document.getElementById('summaryTanggalLahir').textContent = data.data.tanggalLahir ? formatDate(data.data.tanggalLahir) : '-';
+                document.getElementById('summaryAgama').textContent = data.data.agama || '-';
+                document.getElementById('summaryPendidikan').textContent = data.data.pendidikan || '-';
+                document.getElementById('summaryPekerjaan').textContent = data.data.pekerjaan || '-';
+                document.getElementById('summaryStatusPerkawinan').textContent = data.data.statusPerkawinan || '-';
+                document.getElementById('summaryStatusHubungan').textContent = data.data.statusHubungan || '-';
+                document.getElementById('summaryKewarganegaraan').textContent = data.data.kewarganegaraan || '-';
+                document.getElementById('summaryNamaAyah').textContent = data.data.namaAyah || '-';
+                document.getElementById('summaryNamaIbu').textContent = data.data.namaIbu || '-';
+
+                // Hide form and show summary
+                formContainer.style.display = 'none';
+                summaryContainer.classList.add('show');
+
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.className = 'success-message';
+                successMsg.innerHTML = '<i class="bi bi-check-circle"></i> ' + data.message;
+                summaryContainer.insertBefore(successMsg, summaryContainer.firstChild);
+
+                // Scroll to summary
+                summaryContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            } else {
+                // Handle error
+                alert('Error: ' + data.message);
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan: ' + error.message);
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        });
+    });
+        formContainer.style.display = 'none';
+        summaryContainer.classList.add('show');
+
+        // Scroll to summary
+        summaryContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    // Reset form function
+    window.resetForm = function() {
+        // Clear form
+        kkForm.reset();
+        
+        // Remove success message if exists
+        const successMsg = summaryContainer.querySelector('.success-message');
+        if (successMsg) {
+            successMsg.remove();
+        }
+        
+        // Show form and hide summary
+        formContainer.style.display = 'block';
+        summaryContainer.classList.remove('show');
+
+        // Scroll to form
+        formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    // Format date function
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('id-ID', options);
+    }
+
+    // Validasi input NIK - hanya terima angka
+    const nikInputs = document.querySelectorAll('#nik');
+    nikInputs.forEach(input => {
+        input.addEventListener('keypress', function(e) {
+            // Hanya izinkan angka
+            if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+            }
+        });
+
+        // Cegah paste yang bukan angka
+        input.addEventListener('paste', function(e) {
+            const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+            if (!/^[0-9]*$/.test(pastedText)) {
+                e.preventDefault();
+            }
+        });
+    });
+
+
+/* ============================================
    LOG INITIALIZATION
    ============================================ */
 
@@ -299,4 +443,4 @@ console.log('Dokar Wonosari - Portal Administrasi Desa');
 console.log('Version 2.0');
 console.log('Powered by Vanilla HTML, CSS & JavaScript');
 
-}); // End of DOMContentLoaded
+

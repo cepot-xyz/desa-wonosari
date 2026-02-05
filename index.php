@@ -46,14 +46,14 @@
         <section id="kelahiran" class="service-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Kelahiran</h2>
-                    <p class="section-subtitle">Pendaftaran dan Informasi Kelahiran</p>
+                    <h2>Layanan Kependudukan</h2>
+                    <p class="section-subtitle">Pusat Layanan Kependudukan Desa Wonosari</p>
                 </div>
                 
                 <div class="service-grid">
                     <div class="service-card">
                         <div class="card-icon"><i class="bi bi-clipboard-heart"></i></div>
-                        <h3>Pendaftaran Kelahiran</h3>
+                        <h3>Pembuatan Akta Kelahiran</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
@@ -79,14 +79,14 @@
         <section id="kematian" class="service-section alt-bg">
             <div class="container">
                 <div class="section-header">
-                    <h2>Layanan Surat Kematian</h2>
-                    <p class="section-subtitle">Pelayanan Surat Kematian</p>
+                    <h2>Layanan Surat Menyurat</h2>
+                    <p class="section-subtitle">Pelayanan Pengantar SKCK, Surat Kehilangan Barang, Surat Keterangan Usaha</p>
                 </div>
                 
                 <div class="service-grid">
                     <div class="service-card">
                         <div class="card-icon"><i class="bi bi-pencil-square"></i></div>
-                        <h3>Layanan Akta Kematian</h3>
+                        <h3>Layanan Pembuatan SKCK</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <a href="#" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
@@ -218,6 +218,6 @@
     <?php include 'components/footer.php'; renderFooter(); ?>
 
     <!-- Custom JavaScript -->
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -72,5 +72,6 @@
     require_once 'components/footer.php';
     renderFooter();
     ?>
+<script src="script.js"></script>
 </body>
 </html>

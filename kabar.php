@@ -65,6 +65,6 @@
     <?php include 'components/footer.php'; renderFooter(); ?>
 
     <!-- Custom JavaScript -->
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js"></script>
 </body>
 </html>

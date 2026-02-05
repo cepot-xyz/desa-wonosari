@@ -393,11 +393,11 @@
                     </tbody>
                 </table>
 
-                <div style="margin-top: var(--spacing-lg); padding: var(--spacing-lg); background-color: var(--color-accent); border-radius: 8px;">
+                <!-- <div style="margin-top: var(--spacing-lg); padding: var(--spacing-lg); background-color: var(--color-accent); border-radius: 8px;">
                     <p style="margin: 0; color: var(--color-text); text-align: justify;">
                         <strong>Catatan:</strong> Data di atas masih tahun 2023, nanti minta data 2025 di Bu Endang
                     </p>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
