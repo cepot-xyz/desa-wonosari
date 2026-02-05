@@ -22,13 +22,12 @@ function renderNavbar() {
             <!-- Desktop Menu -->
             <ul class="nav-menu desktop-menu">
                 <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Profil</a>
+                    <a href="index.php" class="nav-link">Profil</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Profil Desa</a>
-                        <a href="#" class="dropdown-item">Visi Misi</a>
-                        <a href="#" class="dropdown-item">Sejarah</a>
+                        <a href="visi-misi.php" class="dropdown-item">Visi Misi</a>
+                        <a href="sejarah.php" class="dropdown-item">Sejarah</a>
                         <a href="peta.php" class="dropdown-item">Peta</a>
-                        <a href="#" class="dropdown-item">Peraturan</a>
+                        <a href="peraturan.php" class="dropdown-item">Peraturan</a>
                     </div>
                 </li>
                 <li class="nav-dropdown">
@@ -44,7 +43,7 @@ function renderNavbar() {
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Layanan Kependudukan</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Pembuatan KK</a>
+                        <a href="kk.php" class="dropdown-item">Pembuatan KK</a>
                         <a href="#" class="dropdown-item">Akta Kelahiran</a>
                         <a href="#" class="dropdown-item">Akta Kematian</a>
                         <a href="#" class="dropdown-item">Pindah Kependudukan</a>
@@ -76,13 +75,6 @@ function renderNavbar() {
                         <a href="#" class="dropdown-item">Cafe</a>
                     </div>
                 </li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Potensi</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Bursa Inovasi</a>
-                        <a href="#" class="dropdown-item">Potensi Usaha</a>
-                    </div>
-                </li>
             </ul>
             
             <!-- Hamburger Menu -->
@@ -93,7 +85,6 @@ function renderNavbar() {
             </div>
         </div>
     </nav>
-
     <!-- Mobile Navigation Menu -->
     <div class="mobile-nav" id="mobileNav">
         <ul class="nav-menu mobile-menu">
@@ -128,11 +119,10 @@ function renderNavbar() {
             <li class="nav-dropdown">
                 <a href="#" class="nav-link dropdown-toggle">Profil</a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Profil Desa</a>
-                    <a href="#" class="dropdown-item">Visi Misi</a>
-                    <a href="#" class="dropdown-item">Sejarah</a>
+                    <a href="visi-misi.php" class="dropdown-item">Visi Misi</a>
+                    <a href="sejarah.php" class="dropdown-item">Sejarah</a>
                     <a href="peta.php" class="dropdown-item">Peta</a>
-                    <a href="#" class="dropdown-item">Peraturan</a>
+                    <a href="peraturan.php" class="dropdown-item">Peraturan</a>
                 </div>
             </li>
             <li class="nav-dropdown">
