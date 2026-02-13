@@ -167,7 +167,7 @@
                         <div class="card-icon"><i class="bi bi-graph-up"></i></div>
                         <h3>Data & Statistik</h3>
                         <p>Informasi data desa meliputi data geografis, sosial budaya, ekonomi desa, infrastruktur, dan data kependudukan yang tersedia untuk publik.</p>
-                        <a href="geografis.php" class="btn-link">Pelajari Lebih Lanjut →</a>
+                        <a href="data.php" class="btn-link">Pelajari Lebih Lanjut →</a>
                     </div>
                 </div>
             </div>

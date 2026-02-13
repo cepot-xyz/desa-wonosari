@@ -9,7 +9,7 @@
     <meta name="description" content="APBN dan Infografis Keuangan - Desa Wonosari">
     <meta name="keywords" content="APBN, Keuangan, Desa Wonosari">
     <meta name="author" content="Pemerintah Desa Wonosari">
-    <title>APBN - Desa Wonosari</title>
+    <title>APBDES - Desa Wonosari</title>
     
     <!-- Google Fonts: Figtree -->
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
