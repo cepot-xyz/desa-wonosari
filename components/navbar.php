@@ -35,35 +35,22 @@ function renderNavbar() {
                     <a href="#" class="nav-link">Layanan Kependudukan</a>
                     <div class="dropdown-menu">
                         <a href="kk.php" class="dropdown-item">Pembuatan KK</a>
-                        <a href="#" class="dropdown-item">Akta Kelahiran</a>
-                        <a href="#" class="dropdown-item">Akta Kematian</a>
-                        <a href="#" class="dropdown-item">Pindah Kependudukan</a>
-                        <a href="#" class="dropdown-item">Datang Kependudukan</a>
+                        <a href="kelahiran.php" class="dropdown-item">Akta Kelahiran</a>
+                        <a href="kematian.php" class="dropdown-item">Akta Kematian</a>
+                        <a href="pindah.php" class="dropdown-item">Pindah Kependudukan</a>
+                        <a href="datang.php" class="dropdown-item">Datang Kependudukan</a>
                     </div>
                 </li>
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Surat Menyurat</a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Pengantar SKCK</a>
-                        <a href="#" class="dropdown-item">Surat Kehilangan</a>
-                        <a href="#" class="dropdown-item">Keterangan Usaha</a>
+                        <a href="skck.php" class="dropdown-item">Pengantar SKCK</a>
+                        <a href="kehilangan.php" class="dropdown-item">Surat Kehilangan</a>
+                        <a href="usaha.php" class="dropdown-item">Keterangan Usaha</a>
+                        <a href="sktm.php" class="dropdown-item">Keterangan Miskin</a>
                     </div>
                 </li>
                 <li><a href="apbdes.php" class="nav-link">APBDES</a></li>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Berita</a>
-                        <a href="#" class="dropdown-item">Agenda</a>
-                        <!-- <a href="#" class="dropdown-item">Kegiatan</a> -->
-                    </div>
-                </li>
-                <!-- <li class="nav-dropdown">
-                    <a href="#" class="nav-link">Wisata</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Kolam Renang</a>
-                        <a href="#" class="dropdown-item">Mini Soccer</a>
-                        <a href="#" class="dropdown-item">Cafe</a>
-                    </div>
-                </li> -->
             </ul>
             
             <!-- Hamburger Menu -->
@@ -77,9 +64,8 @@ function renderNavbar() {
     <!-- Mobile Navigation Menu -->
     <div class="mobile-nav" id="mobileNav">
         <ul class="nav-menu mobile-menu">
-            <li><a href="index.php" class="nav-link">Beranda</a></li>
             <li class="nav-dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Profil</a>
+                <a href="index.php" class="nav-link">Profil</a>
                 <div class="dropdown-menu">
                     <a href="visi-misi.php" class="dropdown-item">Visi Misi</a>
                     <a href="sejarah.php" class="dropdown-item">Sejarah</a>
@@ -89,40 +75,25 @@ function renderNavbar() {
             </li>
             <li><a href="data.php" class="nav-link">Data</a></li>
             <li class="nav-dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Layanan Kependudukan</a>
+                <a href="#" class="nav-link">Layanan Kependudukan</a>
                 <div class="dropdown-menu">
                     <a href="kk.php" class="dropdown-item">Pembuatan KK</a>
-                    <a href="#" class="dropdown-item">Akta Kelahiran</a>
-                    <a href="#" class="dropdown-item">Akta Kematian</a>
-                    <a href="#" class="dropdown-item">Pindah Kependudukan</a>
-                    <a href="#" class="dropdown-item">Datang Kependudukan</a>
+                    <a href="kelahiran.php" class="dropdown-item">Akta Kelahiran</a>
+                    <a href="kematian.php" class="dropdown-item">Akta Kematian</a>
+                    <a href="pindah.php" class="dropdown-item">Pindah Kependudukan</a>
+                    <a href="datang.php" class="dropdown-item">Datang Kependudukan</a>
                 </div>
             </li>
             <li class="nav-dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Surat Menyurat</a>
+                <a href="#" class="nav-link">Surat Menyurat</a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Pengantar SKCK</a>
-                    <a href="#" class="dropdown-item">Surat Kehilangan</a>
-                    <a href="#" class="dropdown-item">Keterangan Usaha</a>
+                    <a href="skck.php" class="dropdown-item">Pengantar SKCK</a>
+                    <a href="kehilangan.php" class="dropdown-item">Surat Kehilangan</a>
+                    <a href="usaha.php" class="dropdown-item">Keterangan Usaha</a>
+                    <a href="sktm.php" class="dropdown-item">Keterangan Miskin</a>
                 </div>
             </li>
             <li><a href="apbdes.php" class="nav-link">APBDES</a></li>
-            <li class="nav-dropdown">
-                <a href="kabar.php" class="nav-link dropdown-toggle">Kabar</a>
-                <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Berita</a>
-                    <a href="#" class="dropdown-item">Agenda</a>
-                    <!-- <a href="#" class="dropdown-item">Kegiatan</a> -->
-                </div>
-            </li>
-            <!-- <li class="nav-dropdown">
-                <a href="#" class="nav-link dropdown-toggle">Wisata</a>
-                <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Kolam Renang</a>
-                    <a href="#" class="dropdown-item">Mini Soccer</a>
-                    <a href="#" class="dropdown-item">Cafe</a>
-                </div>
-            </li> -->
         </ul>
     </div>
     <?php
